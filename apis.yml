@@ -1,23 +1,66 @@
 aid: atraveo
+
 name: Atraveo
-description: 'Atraveo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.hometogo.net/assets/media/pics/1920_auto/6352721ce45d0.jpg
+
+description: 'Atraveo is a European holiday‑home rental platform that connects property owners with guests across dozens of booking portals such as Airbnb, Booking.com and Expedia. It offers a full‑service solution including marketing, payment processing, guest communication and 7‑day payout, charging a 19.5% commission only on successful bookings. Owners can list properties for free, set their own prices and retain control over distribution, while Atraveo handles the operational workload, providing tools, tutorials and support for hosts.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atraveo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Holiday Rentals
+- Vacation Homes
+- Property Management
+- Travel
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atraveo-hosts.yml
+- type: Vendors
+  url: vendors/atraveo-vendors.yml
+- type: SignUp
+  url: https://signup.atraveo.com/register
+- type: Newsroom
+  url: https://www.atraveo.com/press
+- type: DomainSecurity
+  url: security/atraveo-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/atraveo
+  url: https://www.atraveo.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: "API host https://api.atraveo.com returned 403 for OpenAPI attempts, and no documentation host is available."
+  evidence:
+    - url: https://api.atraveo.com/openapi.json
+      status: 403
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
